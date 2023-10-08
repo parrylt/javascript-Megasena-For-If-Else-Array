@@ -1,21 +1,35 @@
-function pesquisa ()
-{
-    const numeros = [];
-    
-    for (var i = 1; i <= 30; i++) {
-        numeros.push(i);
-     }
-    
-     if (
-        document.getElementById("cxpesquisa1").value == numeros [12] && 
-        document.getElementById("cxpesquisa2").value == numeros [17] &&
-        document.getElementById("cxpesquisa3").value == numeros [21] && 
-        document.getElementById("cxpesquisa4").value == numeros [25] &&
-        document.getElementById("cxpesquisa5").value == numeros [29])
-     {
-        document.write ("<h1>Parabéns, você ganhou na Mega-sena!</h1>");
-     }
-     else{
-        document.write ("<h1>Tente novamente.</h1>");      
-     }
+function jogarMegaSena() {
+   // Gera 6 números aleatórios diferentes entre 1 e 60
+   const numerosSorteados = [];
+   while (numerosSorteados.length < 6) {
+       const numeroAleatorio = Math.floor(Math.random() * 60) + 1;
+       if (!numerosSorteados.includes(numeroAleatorio)) {
+           numerosSorteados.push(numeroAleatorio);
+       }
+   }
+
+   // Pega os números do usuário
+   const numerosUsuario = [
+       parseInt(document.getElementById("num1").value),
+       parseInt(document.getElementById("num2").value),
+       parseInt(document.getElementById("num3").value),
+       parseInt(document.getElementById("num4").value),
+       parseInt(document.getElementById("num5").value),
+       parseInt(document.getElementById("num6").value)
+   ];
+
+   // Verifica quantos números coincidem com os números sorteados
+   let numerosCoincidentes = 0;
+   for (let i = 0; i < numerosUsuario.length; i++) {
+       if (numerosSorteados.includes(numerosUsuario[i])) {
+           numerosCoincidentes++;
+       }
+   }
+
+   // Exibe o resultado ao usuário
+   if (numerosCoincidentes === 6) {
+       alert("Parabéns, você ganhou na Mega-sena com os números sorteados: " + numerosSorteados.join(", "));
+   } else {
+       alert("Você acertou " + numerosCoincidentes + " números, mas não ganhou. Os números sorteados foram: " + numerosSorteados.join(", "));
+   }
 }
