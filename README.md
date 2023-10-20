@@ -8,6 +8,6 @@ um projetinho de megasena com vários elementos no javascript
 </div>
 <br><br>
 <div align="center">
-  <h3>Sem vitória, mas pelo menos mostra os números</h3>
+  <h3>Sem vitória, mas pelo menos mostra os números. E é isto</h3>
   <img src="ImagensMega/2.png">
 </div>
