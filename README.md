@@ -1,5 +1,5 @@
 # javascript-Megasena-For-If-Else-Array
-um projetinho de megasena com vários elementos no javascript.
+um projetinho de megasena com vários elementos no javascript. primeiro semestre na ETEC de Guarulhos
 <br><br>
 
 <div align="center">
